@@ -9,15 +9,15 @@ contract Assignment7Test is Test {
 
     function setUp() public {
         // pass your token name and symbol here
-        assignment = new Assignment7();
+        assignment = new Assignment7("Mr-NumberOne", "Mr#1");
     }
 
     function testMintAndTransfer() public {
         // Mint tokens to the test contract
-        assignment.mint(address(this), 1000 * 10**18);
+        assignment.mint(address(this), 1000 * 10 ** 18);
 
         // Check balance of the test contract
         uint256 balance = assignment.balanceOf(address(this));
-        assertEq(balance, 1000 * 10**18, "Balance should be 1000 tokens");
+        assertEq(balance, 1000 * 10 ** 18, "Balance should be 1000 tokens");
     }
 }
